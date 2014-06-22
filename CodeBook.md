@@ -12,78 +12,83 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 The tidy data includes the following variables:
 
 
-  1. __bold Subject__: number 1-30 identifying the volunteers performing the experiment
+  1. __Subject__: number 1-30 identifying the volunteers performing the experiment
 
-  2. ctivity: one of 6 physical activities (walking, walking upstairs, walking downstairs, sitting, standing, laying). These are defined in the 'activity_labels.txt' file provided.
+  2. __Activity__: one of 6 physical activities (walking, walking upstairs, walking downstairs, sitting, standing, laying). These are defined in the 'activity_labels.txt' file provided.
 
-3) averages of the following metrics (list does not include XYZ axes, which may be indicated on the column names to identify the axis of the measurement):
+  3. averages of the following metrics (list does not include XYZ axes, which may be indicated on the column names to identify the axis of the measurements):
 
-tBodyAcc-mean()
+ [1] __"subject"__: number 1-30 identifying the volunteers performing the experiment
+ 
+ [2] __"activity"__: one of 6 physical activities (walking, walking upstairs, walking downstairs, sitting, standing, laying). These are defined in the 'activity_labels.txt' file provided.
 
-tBodyAcc-std()
+Averages of the following metrics (list does not include XYZ axes, which may be indicated on the column names to identify the axis of the measurements):
 
-tGravityAcc-mean()
-
-tGravityAcc-std()
-
-tBodyAccJerk-mean()
-
-tBodyAccJerk-std()
-
-tBodyGyro-mean()
-
-tBodyGyro-std()
-
-tBodyGyroJerk-mean()
-
-tBodyGyroJerk-std()
-
-tBodyAccMag-mean()
-
-tBodyAccMag-std()
-
-tGravityAccMag-mean()
-
-tGravityAccMag-std()
-
-tBodyAccJerkMag-mean()
-
-tBodyAccJerkMag-std()
-
-tBodyGyroMag-mean()
-
-tBodyGyroMag-std()
-
-tBodyGyroJerkMag-mean()
-
-tBodyGyroJerkMag-std()
-
-fBodyAcc-mean()
-
-fBodyAcc-std()
-
-fBodyAccJerk-mean()
-
-fBodyAccJerk-std()
-
-fBodyGyro-mean()
-
-fBodyGyro-std()
-
-fBodyAccMag-mean()
-
-fBodyAccMag-std()
-
-fBodyBodyAccJerkMag-mean()
-
-fBodyBodyAccJerkMag-std()
-
-fBodyBodyGyroMag-mean()
-
-fBodyBodyGyroMag-std()
-
-fBodyBodyGyroJerkMag-mean()
-
-fBodyBodyGyroJerkMag-std()
+ [3] "fBodyAcc_mean_X"          
+ [4] "fBodyAcc_mean_Y"          
+ [5] "fBodyAcc_mean_Z"          
+ [6] "fBodyAcc_std_X"           
+ [7] "fBodyAcc_std_Y"           
+ [8] "fBodyAcc_std_Z"           
+ [9] "fBodyAccJerk_mean_X"      
+[10] "fBodyAccJerk_mean_Y"      
+[11] "fBodyAccJerk_mean_Z"      
+[12] "fBodyAccJerk_std_X"       
+[13] "fBodyAccJerk_std_Y"       
+[14] "fBodyAccJerk_std_Z"       
+[15] "fBodyAccMag_mean"         
+[16] "fBodyAccMag_std"          
+[17] "fBodyBodyAccJerkMag_mean" 
+[18] "fBodyBodyAccJerkMag_std"  
+[19] "fBodyBodyGyroJerkMag_mean"
+[20] "fBodyBodyGyroJerkMag_std" 
+[21] "fBodyBodyGyroMag_mean"    
+[22] "fBodyBodyGyroMag_std"     
+[23] "fBodyGyro_mean_X"         
+[24] "fBodyGyro_mean_Y"         
+[25] "fBodyGyro_mean_Z"         
+[26] "fBodyGyro_std_X"          
+[27] "fBodyGyro_std_Y"          
+[28] "fBodyGyro_std_Z"          
+[29] "tBodyAcc_mean_X"          
+[30] "tBodyAcc_mean_Y"          
+[31] "tBodyAcc_mean_Z"          
+[32] "tBodyAcc_std_X"           
+[33] "tBodyAcc_std_Y"           
+[34] "tBodyAcc_std_Z"           
+[35] "tBodyAccJerk_mean_X"      
+[36] "tBodyAccJerk_mean_Y"      
+[37] "tBodyAccJerk_mean_Z"      
+[38] "tBodyAccJerk_std_X"       
+[39] "tBodyAccJerk_std_Y"       
+[40] "tBodyAccJerk_std_Z"       
+[41] "tBodyAccJerkMag_mean"     
+[42] "tBodyAccJerkMag_std"      
+[43] "tBodyAccMag_mean"         
+[44] "tBodyAccMag_std"          
+[45] "tBodyGyro_mean_X"         
+[46] "tBodyGyro_mean_Y"         
+[47] "tBodyGyro_mean_Z"         
+[48] "tBodyGyro_std_X"          
+[49] "tBodyGyro_std_Y"          
+[50] "tBodyGyro_std_Z"          
+[51] "tBodyGyroJerk_mean_X"     
+[52] "tBodyGyroJerk_mean_Y"     
+[53] "tBodyGyroJerk_mean_Z"     
+[54] "tBodyGyroJerk_std_X"      
+[55] "tBodyGyroJerk_std_Y"      
+[56] "tBodyGyroJerk_std_Z"      
+[57] "tBodyGyroJerkMag_mean"    
+[58] "tBodyGyroJerkMag_std"     
+[59] "tBodyGyroMag_mean"        
+[60] "tBodyGyroMag_std"         
+[61] "tGravityAcc_mean_X"       
+[62] "tGravityAcc_mean_Y"       
+[63] "tGravityAcc_mean_Z"       
+[64] "tGravityAcc_std_X"        
+[65] "tGravityAcc_std_Y"        
+[66] "tGravityAcc_std_Z"        
+[67] "tGravityAccMag_mean"      
+[68] "tGravityAccMag_std"  
 
 Each feature was normalized and bounded between -1,1, therefore, there are no units for all measurements listed above.
