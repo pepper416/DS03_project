@@ -36,6 +36,8 @@ Averages of the following metrics, with the following naming rules:
  * __Y__ <-> the axis of the measurement is Y axis
  * __Z__ <-> the axis of the measurement is Z axis
  
+![Alt text](C:/Users/jdong/Desktop/DataScience/03_clean_data/Capture.PNG) 
+
  [1] "fBodyAcc_mean_X"           "fBodyAcc_mean_Y"           "fBodyAcc_mean_Z"           "fBodyAcc_std_X"           
  [5] "fBodyAcc_std_Y"            "fBodyAcc_std_Z"            "fBodyAccJerk_mean_X"       "fBodyAccJerk_mean_Y"      
  [9] "fBodyAccJerk_mean_Z"       "fBodyAccJerk_std_X"        "fBodyAccJerk_std_Y"        "fBodyAccJerk_std_Z"       
