@@ -1,5 +1,5 @@
 ## Data Science - Getting and Cleaning Data - Final Project
-============
+==========
 
 ### Summary
 
@@ -7,7 +7,8 @@ The purpose of this project is to collect, work with and clean a data sets about
 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
-The detailed data set information can be found from the above link.
+Original data were collected by: Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012. For more detailed data set information, please refer to the above link.
+
 
 Here are the data for the project:
 
