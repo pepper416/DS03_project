@@ -11,18 +11,30 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
 The tidy data includes the following variables:
 
-
-  1. __Subject__: number 1-30 identifying the volunteers performing the experiment
-
-  2. __Activity__: one of 6 physical activities (walking, walking upstairs, walking downstairs, sitting, standing, laying). These are defined in the 'activity_labels.txt' file provided.
-
-  3. averages of the following metrics (list does not include XYZ axes, which may be indicated on the column names to identify the axis of the measurements):
-
  [1] __"subject"__: number 1-30 identifying the volunteers performing the experiment
  
  [2] __"activity"__: one of 6 physical activities (walking, walking upstairs, walking downstairs, sitting, standing, laying). These are defined in the 'activity_labels.txt' file provided.
 
-Averages of the following metrics (list does not include XYZ axes, which may be indicated on the column names to identify the axis of the measurements):
+Averages of the following metrics, with the following naming rules: 
+
+ * begins with 't' -> Time Domain signals 
+ * begins with 'f' -> Frequency Domain signals 
+
+ * Acc -> Acceleration signals 
+ * Gyro -> Gyroscope signals 
+
+ * Body -> Body signals 
+ * Gravity -> gravity signals 
+
+ * Jerk -> Jerk signals 
+ * Mag -> magnitude of signals by Euclidean Norm 
+
+ * -mean -> Mean
+ * -std -> Standard Deviation
+
+ * -X -> the axis of the measurement is X axis
+ * -Y -> the axis of the measurement is Y axis
+ * -Z -> the axis of the measurement is Z axis
 
  [3] "fBodyAcc_mean_X"          
  [4] "fBodyAcc_mean_Y"          
