@@ -36,92 +36,35 @@ Averages of the following metrics, with the following naming rules:
  * __Y__ <-> the axis of the measurement is Y axis
  * __Z__ <-> the axis of the measurement is Z axis
  
-![alt text](https://dl.dropboxusercontent.com/u/19473492/p1.png "Logo Title Text 1")
+![alt text](https://dl.dropboxusercontent.com/u/19473492/p1.png "variable names")
+  
+=========
+### Clean data steps:
+
+0. step0: download data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and unzip file to the work directory.
+
+1. Step1: merges the training and the test sets to create one data set.
+* Use __cbind()__ to combine subject data, activity data (y), and measurement data (X) from both the test datasets and training datasets. 
+* Use __rbind()__ to combine test data and training data. 
+* add feature name from "feature.txt" file
+
+2. Step2: Extracts only the measurements on the mean and standard deviation for each measurement. 
+* use __grep()__ function to select the colunms that only contains mean() and std(). Note: the meanFreq() is not included in my list.
+
+3. Step3: Uses descriptive activity names to name the activities in the data set.
+* the labels for the six activities can be found from "activity_labels.txt". The "_" between words in label column was removed.
+
+4. Step4: Appropriately labels the data set with descriptive variable names. 
+* the column names should not include "-" or "()", because R interprets the "-" as an operator, "()" as a function call. Therefore, change the dash "-" to underline "_" and remove the "()" in the variable names.
+* this could be done by __sub()__ function.
+
+5. Step5: Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+* use __aggregate()__ to get the average of the 66 variables by subjects and activities. The second tidy data contains 180 rows (= 30 subjects * 6 activities) and 68 columns (="Subject" + "Activity" + 66 summary variables). 
 
 
- [1] "fBodyAcc_mean_X"           "fBodyAcc_mean_Y"           "fBodyAcc_mean_Z"           "fBodyAcc_std_X"           
- [5] "fBodyAcc_std_Y"            "fBodyAcc_std_Z"            "fBodyAccJerk_mean_X"       "fBodyAccJerk_mean_Y"      
- [9] "fBodyAccJerk_mean_Z"       "fBodyAccJerk_std_X"        "fBodyAccJerk_std_Y"        "fBodyAccJerk_std_Z"       
-[13] "fBodyAccMag_mean"          "fBodyAccMag_std"           "fBodyBodyAccJerkMag_mean"  "fBodyBodyAccJerkMag_std"  
-[17] "fBodyBodyGyroJerkMag_mean" "fBodyBodyGyroJerkMag_std"  "fBodyBodyGyroMag_mean"     "fBodyBodyGyroMag_std"     
-[21] "fBodyGyro_mean_X"          "fBodyGyro_mean_Y"          "fBodyGyro_mean_Z"          "fBodyGyro_std_X"          
-[25] "fBodyGyro_std_Y"           "fBodyGyro_std_Z"           "tBodyAcc_mean_X"           "tBodyAcc_mean_Y"          
-[29] "tBodyAcc_mean_Z"           "tBodyAcc_std_X"            "tBodyAcc_std_Y"            "tBodyAcc_std_Z"           
-[33] "tBodyAccJerk_mean_X"       "tBodyAccJerk_mean_Y"       "tBodyAccJerk_mean_Z"       "tBodyAccJerk_std_X"       
-[37] "tBodyAccJerk_std_Y"        "tBodyAccJerk_std_Z"        "tBodyAccJerkMag_mean"      "tBodyAccJerkMag_std"      
-[41] "tBodyAccMag_mean"          "tBodyAccMag_std"           "tBodyGyro_mean_X"          "tBodyGyro_mean_Y"         
-[45] "tBodyGyro_mean_Z"          "tBodyGyro_std_X"           "tBodyGyro_std_Y"           "tBodyGyro_std_Z"          
-[49] "tBodyGyroJerk_mean_X"      "tBodyGyroJerk_mean_Y"      "tBodyGyroJerk_mean_Z"      "tBodyGyroJerk_std_X"      
-[53] "tBodyGyroJerk_std_Y"       "tBodyGyroJerk_std_Z"       "tBodyGyroJerkMag_mean"     "tBodyGyroJerkMag_std"     
-[57] "tBodyGyroMag_mean"         "tBodyGyroMag_std"          "tGravityAcc_mean_X"        "tGravityAcc_mean_Y"       
-[61] "tGravityAcc_mean_Z"        "tGravityAcc_std_X"         "tGravityAcc_std_Y"         "tGravityAcc_std_Z"        
-[65] "tGravityAccMag_mean"       "tGravityAccMag_std"  
 
- [3] "fBodyAcc_mean_X"          
- [4] "fBodyAcc_mean_Y"          
- [5] "fBodyAcc_mean_Z"          
- [6] "fBodyAcc_std_X"           
- [7] "fBodyAcc_std_Y"           
- [8] "fBodyAcc_std_Z"           
- [9] "fBodyAccJerk_mean_X"      
-[10] "fBodyAccJerk_mean_Y"      
-[11] "fBodyAccJerk_mean_Z"      
-[12] "fBodyAccJerk_std_X"       
-[13] "fBodyAccJerk_std_Y"       
-[14] "fBodyAccJerk_std_Z"       
-[15] "fBodyAccMag_mean"         
-[16] "fBodyAccMag_std"          
-[17] "fBodyBodyAccJerkMag_mean" 
-[18] "fBodyBodyAccJerkMag_std"  
-[19] "fBodyBodyGyroJerkMag_mean"
-[20] "fBodyBodyGyroJerkMag_std" 
-[21] "fBodyBodyGyroMag_mean"    
-[22] "fBodyBodyGyroMag_std"     
-[23] "fBodyGyro_mean_X"         
-[24] "fBodyGyro_mean_Y"         
-[25] "fBodyGyro_mean_Z"         
-[26] "fBodyGyro_std_X"          
-[27] "fBodyGyro_std_Y"          
-[28] "fBodyGyro_std_Z"          
-[29] "tBodyAcc_mean_X"          
-[30] "tBodyAcc_mean_Y"          
-[31] "tBodyAcc_mean_Z"          
-[32] "tBodyAcc_std_X"           
-[33] "tBodyAcc_std_Y"           
-[34] "tBodyAcc_std_Z"           
-[35] "tBodyAccJerk_mean_X"      
-[36] "tBodyAccJerk_mean_Y"      
-[37] "tBodyAccJerk_mean_Z"      
-[38] "tBodyAccJerk_std_X"       
-[39] "tBodyAccJerk_std_Y"       
-[40] "tBodyAccJerk_std_Z"       
-[41] "tBodyAccJerkMag_mean"     
-[42] "tBodyAccJerkMag_std"      
-[43] "tBodyAccMag_mean"         
-[44] "tBodyAccMag_std"          
-[45] "tBodyGyro_mean_X"         
-[46] "tBodyGyro_mean_Y"         
-[47] "tBodyGyro_mean_Z"         
-[48] "tBodyGyro_std_X"          
-[49] "tBodyGyro_std_Y"          
-[50] "tBodyGyro_std_Z"          
-[51] "tBodyGyroJerk_mean_X"     
-[52] "tBodyGyroJerk_mean_Y"     
-[53] "tBodyGyroJerk_mean_Z"     
-[54] "tBodyGyroJerk_std_X"      
-[55] "tBodyGyroJerk_std_Y"      
-[56] "tBodyGyroJerk_std_Z"      
-[57] "tBodyGyroJerkMag_mean"    
-[58] "tBodyGyroJerkMag_std"     
-[59] "tBodyGyroMag_mean"        
-[60] "tBodyGyroMag_std"         
-[61] "tGravityAcc_mean_X"       
-[62] "tGravityAcc_mean_Y"       
-[63] "tGravityAcc_mean_Z"       
-[64] "tGravityAcc_std_X"        
-[65] "tGravityAcc_std_Y"        
-[66] "tGravityAcc_std_Z"        
-[67] "tGravityAccMag_mean"      
-[68] "tGravityAccMag_std"  
 
-Each feature was normalized and bounded between -1,1, therefore, there are no units for all measurements listed above.
+
+
+
+
