@@ -36,7 +36,7 @@ Averages of the following metrics, with the following naming rules:
  * __Y__ <-> the axis of the measurement is Y axis
  * __Z__ <-> the axis of the measurement is Z axis
  
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/pepper416/DS03_project/blob/master/p1.png "Logo Title Text 1")
 
 
  [1] "fBodyAcc_mean_X"           "fBodyAcc_mean_Y"           "fBodyAcc_mean_Z"           "fBodyAcc_std_X"           
