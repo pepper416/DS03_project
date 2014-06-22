@@ -14,6 +14,10 @@ Here are the data for the project:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 
+
+==========
+### How to use this repo
+
 You could use the "run_analysis.R" to clean the datasets. (But you need to change the work directory to your own work directory.) 
 
 You could refer to "CodeBook.md" to get more details on the description of the variables, the data, and how did I clean the datasets.
