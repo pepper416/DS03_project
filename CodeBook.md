@@ -17,24 +17,42 @@ The tidy data includes the following variables:
 
 Averages of the following metrics, with the following naming rules: 
 
- * begins with 't' -> Time Domain signals 
- * begins with 'f' -> Frequency Domain signals 
+ * __begins with 't'__ <-> Time Domain signals 
+ * __begins with 'f'__ <-> Frequency Domain signals 
 
- * Acc -> Acceleration signals 
- * Gyro -> Gyroscope signals 
+ * __Acc__ <-> Acceleration signals 
+ * __Gyro__ <-> Gyroscope signals 
 
- * Body -> Body signals 
- * Gravity -> gravity signals 
+ * __Body__ <-> Body signals 
+ * __Gravity__ <-> gravity signals 
 
- * Jerk -> Jerk signals 
- * Mag -> magnitude of signals by Euclidean Norm 
+ * __Jerk__ <-> Jerk signals 
+ * __Mag__ <-> magnitude of signals by Euclidean Norm 
 
- * -mean -> Mean
- * -std -> Standard Deviation
+ * __mean__ <-> Mean
+ * __std__ <-> Standard Deviation
 
- * -X -> the axis of the measurement is X axis
- * -Y -> the axis of the measurement is Y axis
- * -Z -> the axis of the measurement is Z axis
+ * __X__ <-> the axis of the measurement is X axis
+ * __Y__ <-> the axis of the measurement is Y axis
+ * __Z__ <-> the axis of the measurement is Z axis
+ 
+ [1] "fBodyAcc_mean_X"           "fBodyAcc_mean_Y"           "fBodyAcc_mean_Z"           "fBodyAcc_std_X"           
+ [5] "fBodyAcc_std_Y"            "fBodyAcc_std_Z"            "fBodyAccJerk_mean_X"       "fBodyAccJerk_mean_Y"      
+ [9] "fBodyAccJerk_mean_Z"       "fBodyAccJerk_std_X"        "fBodyAccJerk_std_Y"        "fBodyAccJerk_std_Z"       
+[13] "fBodyAccMag_mean"          "fBodyAccMag_std"           "fBodyBodyAccJerkMag_mean"  "fBodyBodyAccJerkMag_std"  
+[17] "fBodyBodyGyroJerkMag_mean" "fBodyBodyGyroJerkMag_std"  "fBodyBodyGyroMag_mean"     "fBodyBodyGyroMag_std"     
+[21] "fBodyGyro_mean_X"          "fBodyGyro_mean_Y"          "fBodyGyro_mean_Z"          "fBodyGyro_std_X"          
+[25] "fBodyGyro_std_Y"           "fBodyGyro_std_Z"           "tBodyAcc_mean_X"           "tBodyAcc_mean_Y"          
+[29] "tBodyAcc_mean_Z"           "tBodyAcc_std_X"            "tBodyAcc_std_Y"            "tBodyAcc_std_Z"           
+[33] "tBodyAccJerk_mean_X"       "tBodyAccJerk_mean_Y"       "tBodyAccJerk_mean_Z"       "tBodyAccJerk_std_X"       
+[37] "tBodyAccJerk_std_Y"        "tBodyAccJerk_std_Z"        "tBodyAccJerkMag_mean"      "tBodyAccJerkMag_std"      
+[41] "tBodyAccMag_mean"          "tBodyAccMag_std"           "tBodyGyro_mean_X"          "tBodyGyro_mean_Y"         
+[45] "tBodyGyro_mean_Z"          "tBodyGyro_std_X"           "tBodyGyro_std_Y"           "tBodyGyro_std_Z"          
+[49] "tBodyGyroJerk_mean_X"      "tBodyGyroJerk_mean_Y"      "tBodyGyroJerk_mean_Z"      "tBodyGyroJerk_std_X"      
+[53] "tBodyGyroJerk_std_Y"       "tBodyGyroJerk_std_Z"       "tBodyGyroJerkMag_mean"     "tBodyGyroJerkMag_std"     
+[57] "tBodyGyroMag_mean"         "tBodyGyroMag_std"          "tGravityAcc_mean_X"        "tGravityAcc_mean_Y"       
+[61] "tGravityAcc_mean_Z"        "tGravityAcc_std_X"         "tGravityAcc_std_Y"         "tGravityAcc_std_Z"        
+[65] "tGravityAccMag_mean"       "tGravityAccMag_std"  
 
  [3] "fBodyAcc_mean_X"          
  [4] "fBodyAcc_mean_Y"          
