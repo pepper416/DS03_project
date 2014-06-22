@@ -10,13 +10,9 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 ### Variable Description
 
 The tidy data includes the following variables:
-| Variable Name     | Description    | 
-| --------|---------|
-| Subject | number 1-30 identifying the volunteers performing the experiment  | 
-| Activity | one of 6 physical activities (walking, walking upstairs, walking downstairs, sitting, standing, laying). These are defined in the 'activity_labels.txt' file provided. | 
 
 
-  1. Subject: number 1-30 identifying the volunteers performing the experiment
+  1. __bold Subject__: number 1-30 identifying the volunteers performing the experiment
 
   2. ctivity: one of 6 physical activities (walking, walking upstairs, walking downstairs, sitting, standing, laying). These are defined in the 'activity_labels.txt' file provided.
 
