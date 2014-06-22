@@ -41,24 +41,30 @@ Averages of the following metrics, with the following naming rules:
 =========
 ### Clean data steps:
 
-0. step0: download data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and unzip file to the work directory.
+Step0: download data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and unzip file to the work directory.
 
-1. Step1: merges the training and the test sets to create one data set.
+Step1: merges the training and the test sets to create one data set.
+
 * Use __cbind()__ to combine subject data, activity data (y), and measurement data (X) from both the test datasets and training datasets. 
 * Use __rbind()__ to combine test data and training data. 
 * add feature name from "feature.txt" file
 
-2. Step2: Extracts only the measurements on the mean and standard deviation for each measurement. 
+Step2: Extracts only the measurements on the mean and standard deviation for each measurement. 
+
 * use __grep()__ function to select the colunms that only contains mean() and std(). Note: the meanFreq() is not included in my list.
 
-3. Step3: Uses descriptive activity names to name the activities in the data set.
+Step3: Uses descriptive activity names to name the activities in the data set.
+
 * the labels for the six activities can be found from "activity_labels.txt". The "_" between words in label column was removed.
 
-4. Step4: Appropriately labels the data set with descriptive variable names. 
+Step4: Appropriately labels the data set with descriptive variable names. 
+
 * the column names should not include "-" or "()", because R interprets the "-" as an operator, "()" as a function call. Therefore, change the dash "-" to underline "_" and remove the "()" in the variable names.
 * this could be done by __sub()__ function.
 
-5. Step5: Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+Step5: Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+
 * use __aggregate()__ to get the average of the 66 variables by subjects and activities. The second tidy data contains 180 rows (= 30 subjects * 6 activities) and 68 columns (="Subject" + "Activity" + 66 summary variables). 
 
 
